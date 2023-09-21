@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Repository URL</title>
+</head>
+<body>
+    <script>
+        // 入力として受け取る<n>の値を取得
+        var n = prompt("Enter a value for <n>:");
+
+        // ベースのリポジトリURL
+        var baseRepoURL = "https://github.com/yooooshi0911/running";
+
+        // <n>を含めた新しいリポジトリURLを生成
+        var newRepoURL = baseRepoURL + n + ".git";
+
+        // 新しいリポジトリURLをコンソールに表示
+        console.log("Generated Repository URL: " + newRepoURL);
+    </script>
+</body>
+</html>
