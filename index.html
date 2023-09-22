@@ -2,18 +2,74 @@
 <html>
 <head>
     <title>Generate Repository URL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>パスワードを入力してください</h1>
+        <label for="answer">回答:</label>
+        <input type="text" id="answer" placeholder="ここに回答を入力してください">
+        <button onclick="generateURL()">ログイン</button>
+    </div>
+
     <script>
-        // ユーザーに質問して回答を取得
-        var userAnswer = prompt("質問に対する回答を入力してください:");
-
-        if (userAnswer !== null) { // キャンセルされた場合は何もしない
-            // 新しいURLを生成
-            var updatedURL = "https://yooooshi0911.github.io/running" + userAnswer;
-
-            // 新しいURLにリダイレクト
-            window.location.href = updatedURL;
+        function generateURL() {
+            var userAnswer = document.getElementById("answer").value;
+            
+            if (userAnswer.trim() !== "") {
+                var updatedURL = "https://yooooshi0911.github.io/running" + userAnswer;
+                window.location.href = updatedURL;
+            }
         }
     </script>
 </body>
