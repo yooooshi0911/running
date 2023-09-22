@@ -5,23 +5,14 @@
 </head>
 <body>
     <script>
-        // 現在のURLを取得
-        var currentURL = window.location.href;
-
         // ユーザーに質問して回答を取得
         var userAnswer = prompt("質問に対する回答を入力してください:");
 
         if (userAnswer !== null) { // キャンセルされた場合は何もしない
-            // スラッシュを追加
-            var updatedURL = currentURL.endsWith('/') ? currentURL : currentURL + '/';
-            
-            // 回答をURLに追加
-            updatedURL += userAnswer;
+            // 新しいURLを生成
+            var updatedURL = "https://yooooshi0911.github.io/running" + userAnswer + "/";
 
-            // 新しいURLをコンソールに表示
-            console.log("新しいURL: " + updatedURL);
-
-            // 新しいURLを開く
+            // 新しいURLにリダイレクト
             window.location.href = updatedURL;
         }
     </script>
