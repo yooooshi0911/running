@@ -12,8 +12,11 @@
         var userAnswer = prompt("質問に対する回答を入力してください:");
 
         if (userAnswer !== null) { // キャンセルされた場合は何もしない
-            // 回答をURLに追加（スラッシュを削除）
-            var updatedURL = currentURL + '/' + userAnswer.replace(/\//g, '');
+            // スラッシュを追加
+            var updatedURL = currentURL.endsWith('/') ? currentURL : currentURL + '/';
+            
+            // 回答をURLに追加
+            updatedURL += userAnswer;
 
             // 新しいURLをコンソールに表示
             console.log("新しいURL: " + updatedURL);
