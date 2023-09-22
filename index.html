@@ -5,17 +5,26 @@
 </head>
 <body>
     <script>
-        // 入力として受け取る<n>の値を取得
-        var n = prompt("Enter a value for <n>:");
+       // 現在のURLを取得
+var currentURL = window.location.href;
 
-        // ベースのリポジトリURL
-        var baseRepoURL = "https://github.com/yooooshi0911/running";
+// ユーザーに質問して回答を取得
+var userAnswer = prompt("質問に対する回答を入力してください:");
 
-        // <n>を含めた新しいリポジトリURLを生成
-        var newRepoURL = baseRepoURL + n ;
+if (userAnswer !== null) { // キャンセルされた場合は何もしない
+    // 回答をURLに追加
+    var updatedURL = currentURL + userAnswer;
 
-        // 新しいurlを表示
-        location.href("Generated Repository URL: " + newRepoURL);
+    // スラッシュを追加
+    updatedURL += '/';
+
+    // 新しいURLをコンソールに表示
+    console.log("新しいURL: " + updatedURL);
+
+    // 新しいURLを開く
+    window.location.href = updatedURL;
+}
+
     </script>
 </body>
 </html>
