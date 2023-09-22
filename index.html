@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Generate Repository URL</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f0f0f0;
             text-align: center;
             padding: 50px;
@@ -30,12 +31,15 @@
             margin-bottom: 10px;
         }
 
+        /* テキストボックスを中央に配置するスタイル */
         input[type="text"] {
             width: 100%;
             padding: 10px;
             font-size: 1.2em;
             border: 1px solid #ccc;
             border-radius: 5px;
+            margin: 0 auto; /* 水平方向の中央配置 */
+            display: block; /* ブロック要素として表示 */
             margin-bottom: 20px;
         }
 
@@ -57,8 +61,8 @@
 <body>
     <div class="container">
         <h1>パスワードを入力してください</h1>
-        <label for="answer">回答:</label>
-        <input type="text" id="answer" placeholder="ここに回答を入力してください">
+        <label for="answer">Teamsで一緒に送りました:</label>
+        <input type="text" id="answer" placeholder="パスワード">
         <button onclick="generateURL()">ログイン</button>
     </div>
 
